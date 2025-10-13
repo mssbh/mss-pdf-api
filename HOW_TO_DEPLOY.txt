@@ -1,0 +1,78 @@
+═══════════════════════════════════════════════════════════
+  MSS PDF API v2.0 - Deployment Instructions
+═══════════════════════════════════════════════════════════
+
+📦 Files in this folder:
+  ✓ app.py              - Main API with new PDF template
+  ✓ requirements.txt    - Python dependencies
+  ✓ Dockerfile          - Container configuration
+  ✓ mss-logo.png        - MSS logo (embedded in PDFs)
+
+═══════════════════════════════════════════════════════════
+  DEPLOYMENT STEPS
+═══════════════════════════════════════════════════════════
+
+Step 1: Copy these 4 files to your GitHub repository
+────────────────────────────────────────────────────────────
+cd /path/to/your/github/repo
+cp app.py .
+cp requirements.txt .
+cp Dockerfile .
+cp mss-logo.png .
+
+Step 2: Commit and push to GitHub
+────────────────────────────────────────────────────────────
+git add .
+git commit -m "Update to v2.0 - Professional PDF template"
+git push
+
+Step 3: Deploy on Render.com
+────────────────────────────────────────────────────────────
+Option A: Automatic (if auto-deploy is enabled)
+  → Render will deploy automatically after push
+
+Option B: Manual
+  → Go to: https://dashboard.render.com
+  → Select: mss-pdf-api
+  → Click: "Deploy latest commit"
+
+═══════════════════════════════════════════════════════════
+  VERIFICATION
+═══════════════════════════════════════════════════════════
+
+After deployment (2-5 minutes):
+
+1. Check API health:
+   curl https://mss-pdf-api.onrender.com/health
+   
+   Should show: "version": "2.0.0"
+
+2. Test PDF export:
+   → Open: https://mss-reports-d9f84.web.app
+   → Login and open any report
+   → Click "Export PDF"
+   → Check the new professional format!
+
+═══════════════════════════════════════════════════════════
+  WHAT'S NEW IN v2.0
+═══════════════════════════════════════════════════════════
+
+✓ Professional PDF template matching your sample
+✓ MSS logo in header
+✓ Everything fits in one A4 page
+✓ Better layout and formatting
+✓ Images in 3-column grid
+✓ Customer signature at bottom
+
+═══════════════════════════════════════════════════════════
+  NOTES
+═══════════════════════════════════════════════════════════
+
+• Frontend is already deployed ✓
+• Only backend needs deployment
+• Deployment takes 2-5 minutes
+• Watch Render logs for: "✓ Logo loaded successfully"
+• First PDF after idle may take 10-15 seconds (free tier)
+
+═══════════════════════════════════════════════════════════
+
